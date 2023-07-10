@@ -1,0 +1,34 @@
+package interface2;
+
+import java.time.LocalDate;
+
+/**
+ *
+ * @Kaua C Dias
+ */
+public abstract class CargoDeConfianca extends Funcionario {
+    protected Bonificacao bonificacao;
+
+    public CargoDeConfianca(Bonificacao bonificacao, String nome, String cpf, String rg, Genero genero, double salarioBase, LocalDate dataNascimento, LocalDate dataAdmissao) {
+        super(nome, cpf, rg, genero, salarioBase, dataNascimento, dataAdmissao);
+        this.bonificacao = bonificacao;
+    }
+
+    public Bonificacao getBonificacao() {
+        return bonificacao;
+    }
+
+    public void setBonificacao(Bonificacao bonificacao) {
+        this.bonificacao = bonificacao;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + 
+                "\nCargo: " + bonificacao;
+    }
+    
+    
+    
+    
+}
